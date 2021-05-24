@@ -15,13 +15,10 @@ module.exports = {
   },
   plugins: ['react-app', 'jest'],
   rules: {
-    'no-use-before-define': 'off',
-    'no-param-reassign': 'off',
     'import/prefer-default-export': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': 'off',
     'react/button-has-type': 'off',
     'react/prop-types': 'off',
-    'operator-linebreak': 'off',
   },
 };
