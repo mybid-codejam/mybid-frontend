@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { NavLink } from 'react-router-dom';
 import useOnClickOutside from 'use-onclickoutside';
