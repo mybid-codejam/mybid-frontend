@@ -1,10 +1,11 @@
+import AppLayout from '../components/layout/AppLayout';
 import { Counter } from '../features/counter/Counter';
 
-export function Home() {
+export default function Home() {
   return (
-    <div>
+    <AppLayout>
       <h2>Home</h2>
       <Counter />
-    </div>
+    </AppLayout>
   );
 }

@@ -21,6 +21,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': 'off',
     'react/button-has-type': 'off',
+    'react/prop-types': 'off',
     'operator-linebreak': 'off',
   },
 };
