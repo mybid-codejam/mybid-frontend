@@ -29,7 +29,7 @@ export default function Navbar() {
                 Objek Lelang
               </NavLink>
 
-              <NavLink to="/jadwallelang" className="navlink">
+              <NavLink to="/lelang/jadwal" className="navlink">
                 Jadwal Lelang
               </NavLink>
 
