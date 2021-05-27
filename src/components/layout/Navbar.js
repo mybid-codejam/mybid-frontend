@@ -25,7 +25,7 @@ export default function Navbar() {
                 Beranda
               </NavLink>
 
-              <NavLink to="/objeklelang" className="navlink">
+              <NavLink to="/lelang/objek" className="navlink">
                 Objek Lelang
               </NavLink>
 
