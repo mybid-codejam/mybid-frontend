@@ -13,7 +13,7 @@ export default function BasicExample() {
         <Route path="/lelang/objek">
           <About />
         </Route>
-        <Route path="/jadwallelang">
+        <Route path="/lelang/jadwal">
           <About />
         </Route>
       </Switch>
