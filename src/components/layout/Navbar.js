@@ -33,7 +33,7 @@ export default function Navbar() {
                 Jadwal Lelang
               </NavLink>
 
-              <NavLink to="/Prosedur" className="navlink">
+              <NavLink to="/prosedur" className="navlink">
                 Prosedur
               </NavLink>
             </div>
