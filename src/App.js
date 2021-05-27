@@ -10,7 +10,7 @@ export default function BasicExample() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/objeklelang">
+        <Route path="/lelang/objek">
           <About />
         </Route>
         <Route path="/jadwallelang">
