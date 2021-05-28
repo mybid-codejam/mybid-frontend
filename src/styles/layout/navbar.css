@@ -39,9 +39,13 @@ nav {
 
 .active::after {
   content: '';
-  display: block;
   width: 100%;
+  display: block;
   height: 2px;
   background-color: #1f3a93;
   transition: width 0.3s;
+}
+
+.profile-menu-mobile {
+  @apply pt-4 pb-3 border-t-2;
 }

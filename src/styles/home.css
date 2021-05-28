@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.lelang-filter {
+  @apply flex flex-col md:flex-row justify-center md:justify-around;
+}
+
+.jadwal-lelang,
+.filter-items {
+  @apply flex flex-col border px-4 py-8;
+  width: 30rem;
+  height: 18rem;
+  background-color: #fcfcfc;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 4px 2px #8e8f9340;
+}
+
+.jadwal-title,
+.filter-title {
+  @apply text-black text-base font-semibold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.jadwal-nav {
+  @apply flex flex-row py-8;
+}
+
+.jadwal-nav > h2 {
+  @apply font-normal text-sm cursor-pointer;
+  margin-right: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.jadwal-nav > h2::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #1f3a93;
+  transition: width 0.3s;
+}
+
+h2:hover {
+  @apply text-secondary;
+}
+
+.jadwal-nav > h2:hover::after {
+  width: 100%;
+}
+
+.jadwal-items {
+  @apply border rounded-md flex flex-row justify-between items-center py-4;
+  max-width: 11.5rem;
+  box-shadow: 2px 2px 4px 0px #d1d0d040;
+}
+
+.objek-lelang {
+  @apply flex flex-row justify-between items-center mx-5;
+}
+
+.detail-objek {
+  @apply flex flex-col text-xs;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.objek-lelang > .detail-objek > .lokasi-objek {
+  @apply font-semibold;
+}
