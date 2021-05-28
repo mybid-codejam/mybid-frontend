@@ -131,7 +131,7 @@ export default function Navbar() {
           <div className="-mr-2 flex md:hidden">
             <button
               type="button"
-              className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-black hover:text-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
               onClick={() => setisMobileMenuShowing(!isMobileMenuShowing)}
@@ -184,21 +184,19 @@ export default function Navbar() {
             <NavLink
               exact
               to="/"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              activeClassName="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-black px-3 py-2 rounded-md text-sm font-medium"
             >
               Home
             </NavLink>
 
             <NavLink
-              to="/about"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              activeClassName="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+              to="/lelang/objek"
+              className="text-black px-3 py-2 rounded-md text-sm font-medium"
             >
-              About
+              Objek Lelang
             </NavLink>
           </div>
-          <div className="pt-4 pb-3 border-t border-gray-700">
+          <div className="profile-menu-mobile border-black">
             <div className="flex items-center px-5">
               <div className="flex-shrink-0">
                 <img
@@ -208,14 +206,14 @@ export default function Navbar() {
                 />
               </div>
               <div className="ml-3">
-                <div className="text-base font-medium leading-none text-white">
+                <div className="text-base font-medium leading-none text-black-400">
                   Tom Cook
                 </div>
-                <div className="text-sm font-medium leading-none text-gray-400">
+                <div className="text-sm font-medium leading-none text-black-400">
                   tom@example.com
                 </div>
               </div>
-              <button className="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+              <button className="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-black-400 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                 <span className="sr-only">View notifications</span>
                 <svg
                   className="h-6 w-6"
@@ -237,21 +235,21 @@ export default function Navbar() {
             <div className="mt-3 px-2 space-y-1">
               <a
                 href="#"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                className="block px-3 py-2 rounded-md text-base font-medium text-black-400 hover:text-secondary"
               >
                 Your Profile
               </a>
 
               <a
                 href="#"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                className="block px-3 py-2 rounded-md text-base font-medium text-black-400 hover:text-secondary"
               >
                 Settings
               </a>
 
               <a
                 href="#"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                className="block px-3 py-2 rounded-md text-base font-medium text-black-400 hover:text-secondary"
               >
                 Sign out
               </a>
