@@ -1,12 +1,13 @@
 import React from 'react';
-import SwiperCore, { Pagination } from 'swiper';
+import SwiperCore, { Pagination, Navigation } from 'swiper/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
+import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 import '../styles/swiper.css';
 import sliderImage from '../images/Group 390.png';
 
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, Navigation]);
 
 export default function slider() {
   return (
@@ -15,9 +16,10 @@ export default function slider() {
         id="main"
         tag="section"
         wrapperTag="ul"
-        spaceBetween={20}
-        slidesPerView={1.3}
+        spaceBetween={50}
+        slidesPerView={1}
         pagination
+        navigation={true}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
       >

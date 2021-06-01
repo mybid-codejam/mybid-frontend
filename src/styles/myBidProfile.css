@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.section-wrapper {
+  @apply p-8 my-8 border;
+  box-shadow: 4px 4px 8px 2px #8e8f934d;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.section-title {
+  @apply text-2xl font-semibold text-center;
+}
+
+.profile-wrapper {
+  @apply grid grid-cols-2 grid-rows-2 gap-4 mt-4;
+}
+
+.profile-point {
+  @apply grid grid-cols-1 md:grid-rows-1 gap-0;
+}
+
+.profile-point-image {
+  @apply text-center mx-auto p-2;
+  width: 8rem;
+  background-color: #1f3a93, 100%;
+}
+
+.profile-detail {
+  @apply flex flex-col justify-center align-middle text-center;
+}
+
+.detail-title {
+  @apply font-semibold text-secondary;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.profile-detail > p {
+  font-size: 0.875rem;
+  line-height: 1.5 * 0.875rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .profile-point {
+    grid-template-columns: 1fr 3fr;
+  }
+}

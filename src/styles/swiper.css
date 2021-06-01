@@ -1,16 +1,7 @@
 .slider {
-  margin: 4rem 0;
+  @apply m-4;
 }
 
-.swiper-container {
-  padding-bottom: 3rem !important;
-  border: none !important;
-}
-
-.swiper-wrapper {
-  padding: 1.5rem;
-}
-
-.swiper-pagination {
-  bottom: 0;
+.swiper-slide > img {
+  width: 100vw;
 }
