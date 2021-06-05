@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.footer-detail {
+  @apply mt-8 grid md:grid-cols-4 gap-4 p-4 md:gap-10;
+  background: #fcfcfc;
+  box-shadow: 0px 0px 10px 4px #97979a40;
+}
+
+h5 {
+  @apply text-secondary text-lg;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600 !important;
+}
+
+.custom-service-list > li {
+  @apply flex flex-row my-2;
+}
+
+.custom-service-list > li > img {
+  width: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.social-media-img {
+  @apply flex flex-row mt-2;
+}
+
+.social-media-img > img {
+  @apply mr-6;
+}
+
+.footer-copyright {
+  @apply text-center p-4 text-white text-xs;
+  background-color: #1f3a93;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-detail {
+    grid-template-columns: 2fr 1fr;
+  }
+}

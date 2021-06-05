@@ -1,11 +1,21 @@
 import AppLayout from '../components/layout/AppLayout';
+import MyBidProfile from '../components/MybidProfile';
+import Slider from '../features/slider';
 import { Counter } from '../features/counter/Counter';
+import FilterDropdown from '../features/filterDropdown';
 import '../styles/home.css';
 import objekImg from '../images/Rectangle 61.png';
+import devicesImg from '../images/Devices.svg';
+import houseImg from '../images/House.svg';
+import carImg from '../images/Car.svg';
+import motorImg from '../images/Motor.svg';
 
 export default function Home() {
   return (
     <AppLayout>
+      <header>
+        <Slider />
+      </header>
       <section className="lelang-filter">
         <div className="jadwal-lelang">
           <h1 className="jadwal-title">Jadwal lelang terdekat</h1>
@@ -28,8 +38,24 @@ export default function Home() {
         </div>
         <div className="filter-items">
           <h1 className="filter-title">Sedang mencari lelang apa?</h1>
+          <div className="filter-icons">
+            <img src={carImg} alt="car image" />
+            <img src={motorImg} alt="motor image" />
+            <img src={devicesImg} alt="devices image" />
+            <img src={houseImg} alt="house image" />
+          </div>
+          <div className="filter-harga">
+            <FilterDropdown />
+            <FilterDropdown />
+            <FilterDropdown />
+            <FilterDropdown />
+          </div>
+          <button className="filter-button" type="button">
+            Cari
+          </button>
         </div>
       </section>
+      <MyBidProfile />
       <Counter />
     </AppLayout>
   );

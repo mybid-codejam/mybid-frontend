@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .lelang-filter {
-  @apply flex flex-col md:flex-row justify-center md:justify-around;
+  @apply flex flex-col md:flex-row justify-center md:justify-between;
 }
 
 .jadwal-lelang,
 .filter-items {
-  @apply flex flex-col border px-4 py-8;
-  width: 30rem;
-  height: 18rem;
+  @apply flex flex-col border px-4 py-8 my-4 md:m-4 w-full h-96 md:h-72;
   background-color: #fcfcfc;
   border-radius: 0.25rem;
   box-shadow: 2px 2px 4px 2px #8e8f9340;
@@ -20,8 +19,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.jadwal-nav,
+.filter-icons {
+  @apply flex flex-row;
+}
+
 .jadwal-nav {
-  @apply flex flex-row py-8;
+  @apply py-8;
 }
 
 .jadwal-nav > h2 {
@@ -64,4 +68,31 @@ h2:hover {
 
 .objek-lelang > .detail-objek > .lokasi-objek {
   @apply font-semibold;
+}
+
+.filter-icons {
+  @apply py-4;
+}
+
+.filter-icons > img {
+  @apply cursor-pointer mr-8 p-2 border-2 rounded-lg;
+}
+
+.filter-icons > img:hover {
+  @apply border-secondary;
+}
+
+.filter-harga {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-4;
+}
+
+.filter-button {
+  @apply p-1 border rounded-xl border-secondary w-20 my-8 ml-auto;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.filter-button:hover {
+  @apply text-white border-none;
+  background: #1f3a93;
 }
