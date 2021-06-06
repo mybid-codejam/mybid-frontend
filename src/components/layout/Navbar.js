@@ -88,7 +88,7 @@ export default function Navbar() {
                   leaveTo="transform opacity-0 scale-95"
                 >
                   <div
-                    className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    className="navbar-mobile"
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="user-menu-button"
@@ -206,14 +206,14 @@ export default function Navbar() {
                 />
               </div>
               <div className="ml-3">
-                <div className="text-base font-medium leading-none text-black-400">
+                <div className="text-base font-medium leading-none text-black">
                   Tom Cook
                 </div>
-                <div className="text-sm font-medium leading-none text-black-400">
+                <div className="text-sm font-medium leading-none text-black">
                   tom@example.com
                 </div>
               </div>
-              <button className="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-black-400 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+              <button className="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-black hover:text-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                 <span className="sr-only">View notifications</span>
                 <svg
                   className="h-6 w-6"
@@ -235,21 +235,21 @@ export default function Navbar() {
             <div className="mt-3 px-2 space-y-1">
               <a
                 href="#"
-                className="block px-3 py-2 rounded-md text-base font-medium text-black-400 hover:text-secondary"
+                className="block px-3 py-2 rounded-md text-base font-medium text-black hover:text-secondary"
               >
                 Your Profile
               </a>
 
               <a
                 href="#"
-                className="block px-3 py-2 rounded-md text-base font-medium text-black-400 hover:text-secondary"
+                className="block px-3 py-2 rounded-md text-base font-medium text-black hover:text-secondary"
               >
                 Settings
               </a>
 
               <a
                 href="#"
-                className="block px-3 py-2 rounded-md text-base font-medium text-black-400 hover:text-secondary"
+                className="block px-3 py-2 rounded-md text-base font-medium text-black hover:text-secondary"
               >
                 Sign out
               </a>

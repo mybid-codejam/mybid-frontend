@@ -1,0 +1,12 @@
+.input-wrapper {
+  @apply flex flex-wrap items-stretch w-full mb-4 relative;
+}
+
+.rupiah-icon {
+  @apply flex items-center leading-normal rounded rounded-r-none border border-r-0 px-3 text-white text-sm border-secondary;
+  background-color: #1f3a93;
+}
+
+.input-filter {
+  @apply flex-shrink flex-grow leading-normal w-px border h-10 rounded-md rounded-l-none px-3 relative border-secondary focus:outline-none focus:ring-2 focus:ring-offset-blue-500 focus:ring-opacity-50;
+}

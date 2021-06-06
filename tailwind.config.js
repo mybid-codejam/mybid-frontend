@@ -13,7 +13,9 @@ module.exports = {
       gray: colors.trueGray,
       indigo: colors.indigo,
       red: colors.rose,
-      yellow: colors.amber,
+      amber: colors.amber,
+      blue: colors.blue,
+      purple: colors.purple,
     },
     ringColor: {
       orange: colors.orange,
@@ -26,5 +28,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };

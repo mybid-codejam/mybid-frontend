@@ -14,7 +14,7 @@ export default function Footer() {
     <footer>
       <div className="footer-detail">
         <div className="customer-service">
-          <h5>Customer Service</h5>
+          <h5 className="detail-title">Customer Service</h5>
           <ul className="custom-service-list">
             <li>
               <img src={mapImg} alt="social-media-icon" />
@@ -38,7 +38,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="myBid-indonesia">
-          <h5>Mybid Indonesia</h5>
+          <h5 className="detail-title">Mybid Indonesia</h5>
           <ul>
             <li>Tentang Mybid</li>
             <li>Info Mybid</li>
@@ -49,7 +49,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="layanan">
-          <h5>Layanan</h5>
+          <h5 className="detail-title">Layanan</h5>
           <ul>
             <li>Cari Objek Lelang</li>
             <li>Jadwal Lelang</li>
@@ -58,7 +58,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="ikuti-kami">
-          <h5>Ikuti kami</h5>
+          <h5 className="detail-title">Ikuti kami</h5>
           <div className="social-media-img">
             <img src={facebookImg} alt="social media image" />
             <img src={instaImg} alt="social media image" />

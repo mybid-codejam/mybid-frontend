@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
-import '../styles/swiper.css';
+import '../styles/features/swiper.css';
 import sliderImage from '../images/Group 390.png';
 
 SwiperCore.use([Pagination, Navigation]);
@@ -20,8 +20,6 @@ export default function slider() {
         slidesPerView={1}
         pagination
         navigation={true}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide tag="li">
           <img alt="image-slider" src={sliderImage} />

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.product-detail-wrapper {
+  @apply p-4;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.product-harga {
+  @apply font-semibold;
+}
+
+.product-merek,
+.product-deadline,
+.product-lokasi {
+  @apply text-sm;
+}
+
+.product-lokasi,
+.product-deadline {
+  @apply flex flex-row;
+}

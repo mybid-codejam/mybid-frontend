@@ -1,0 +1,7 @@
+.disclosure-button {
+  @apply flex flex-row justify-between w-full px-4 py-2 text-sm font-medium text-left text-black rounded-lg focus:outline-none border border-secondary;
+}
+
+.filter-lokasi {
+  @apply flex-shrink flex-grow leading-normal mb-4 border h-10 rounded-md px-3 relative border-secondary focus:outline-none focus:ring-2 focus:ring-offset-blue-500 focus:ring-opacity-50;
+}
