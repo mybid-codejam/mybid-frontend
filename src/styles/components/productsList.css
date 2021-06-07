@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.section-title {
+  @apply text-left font-semibold text-xl;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.swiper-container {
+  @apply my-8;
+}
+
+.swiper-slide {
+  @apply border rounded-lg w-max;
+  box-shadow: 0px 0px 0px 0px #00000040;
+  background-color: #fcfcfc;
+}

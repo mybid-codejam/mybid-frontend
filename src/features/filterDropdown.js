@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
+import '../styles/features/filterDropdown.css';
 
 const people = [
   { name: 'Wade Cooper' },
@@ -33,12 +34,12 @@ export default function filterDropdown() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Listbox.Options className="listbox-option">
               {people.map((person, personIdx) => (
                 <Listbox.Option
                   key={personIdx}
                   className={({ active }) =>
-                    `${active ? 'text-amber-900 bg-amber-100' : 'text-gray-900'}
+                    `${active ? 'text-blue-900 bg-blue-200' : 'text-gray-900'}
                           cursor-default select-none relative py-2 pl-10 pr-4`
                   }
                   value={person}
@@ -55,7 +56,7 @@ export default function filterDropdown() {
                       {selected ? (
                         <span
                           className={`${
-                            active ? 'text-amber-600' : 'text-amber-600'
+                            active ? 'text-blue-600' : 'text-blue-600'
                           }
                                 absolute inset-y-0 left-0 flex items-center pl-3`}
                         >

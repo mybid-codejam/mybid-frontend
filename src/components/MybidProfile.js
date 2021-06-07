@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/myBidProfile.css';
-import icon1 from '../images/icon-profile2.svg';
+import '../styles/components/myBidProfile.css';
+import icon1 from '../images/icon-profile1.svg';
 import icon2 from '../images/icon-profile2.svg';
 import icon3 from '../images/icon-profile3.svg';
 import icon4 from '../images/icon-profile4.svg';

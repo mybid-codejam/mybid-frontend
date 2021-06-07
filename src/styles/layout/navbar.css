@@ -10,7 +10,7 @@ nav {
 }
 
 .text-brand {
-  @apply text-3xl;
+  @apply text-3xl font-semibold;
   color: #1f3a93;
   font-family: 'Poppins', sans-serif;
 }
@@ -48,4 +48,11 @@ nav {
 
 .profile-menu-mobile {
   @apply pt-4 pb-3 border-t-2;
+}
+
+.navbar-mobile {
+  @apply origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 ring-1 ring-opacity-5 focus:outline-none;
+  background-color: #fff !important;
+  --tw-ring-color: rgba(0, 0, 0, var(--tw-ring-opacity));
+  z-index: 2 !important;
 }

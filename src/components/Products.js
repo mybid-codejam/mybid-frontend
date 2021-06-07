@@ -1,27 +1,30 @@
 import React from 'react';
-import { Swiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import Product from './CardProduct';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
+import '../styles/components/productsList.css';
 
 SwiperCore.use([Navigation]);
 
-export default function Products(title, { products }) {
+export default function Products({ title, products }) {
   return (
-    <section className="products-list">
+    <section className="produk-terlaris-wrapper">
       <h3 className="section-title">{title}</h3>
       <Swiper
         id="main"
         tag="section"
         wrapperTag="ul"
-        spaceBetween={5}
-        slidesPerView={5.2}
-        navigation
+        spaceBetween={20}
+        slidesPerView={'auto'}
+        navigation={true}
       >
         {products &&
           products.map((product) => (
-            <Product product={product} key={product.id} />
+            <SwiperSlide key={product.id}>
+              <Product product={product} />
+            </SwiperSlide>
           ))}
       </Swiper>
     </section>

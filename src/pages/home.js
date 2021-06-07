@@ -1,9 +1,9 @@
 import AppLayout from '../components/layout/AppLayout';
 import MyBidProfile from '../components/MybidProfile';
 import Slider from '../features/slider';
-import { Counter } from '../features/counter/Counter';
+import Products from '../components/Products';
 import FilterDropdown from '../features/filterDropdown';
-import '../styles/home.css';
+import '../styles/pages/home.css';
 import objekImg from '../images/Rectangle 61.png';
 import devicesImg from '../images/Devices.svg';
 import houseImg from '../images/House.svg';
@@ -12,6 +12,109 @@ import motorImg from '../images/Motor.svg';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
 export default function Home() {
+  const products = [
+    {
+      id: 1,
+      name: 'Toyota Vios 2005 ',
+      base_price: 'Rp 50.000.000',
+      end_at: '7 Juni 2021',
+      lokasi: 'Bandung ',
+      images: [
+        'https://storage.googleapis.com/mybid-e8958.appspot.com/1622353212304 - quick-response-code-indonesia-standard-qris-logo-F300D5EB32-seeklogo.com.png',
+      ],
+    },
+    {
+      id: 2,
+      name: 'Toyota Vios 2012 ',
+      base_price: 'Rp 55.000.000',
+      end_at: '9 Juni 2021',
+      lokasi: 'Bandung ',
+      images: [
+        'https://storage.googleapis.com/mybid-e8958.appspot.com/1622353212304 - quick-response-code-indonesia-standard-qris-logo-F300D5EB32-seeklogo.com.png',
+      ],
+    },
+    {
+      id: 3,
+      name: 'Daihatsu Agya 2015 ',
+      base_price: 'Rp 58.000.000',
+      end_at: '9 Juni 2021',
+      lokasi: 'Surabaya ',
+      images: [
+        'https://storage.googleapis.com/mybid-e8958.appspot.com/1622353212304 - quick-response-code-indonesia-standard-qris-logo-F300D5EB32-seeklogo.com.png',
+      ],
+    },
+    {
+      id: 4,
+      name: 'Kawasaki Ninja 2015 ',
+      base_price: 'Rp 30.000.000',
+      end_at: '10 Juni 2021',
+      lokasi: 'jakarta ',
+      images: [
+        'https://storage.googleapis.com/mybid-e8958.appspot.com/1622353212304 - quick-response-code-indonesia-standard-qris-logo-F300D5EB32-seeklogo.com.png',
+      ],
+    },
+    {
+      id: 5,
+      name: 'Jeep 2015 ',
+      base_price: 'Rp 200.000.000',
+      end_at: '10 Juni 2021',
+      lokasi: 'jakarta',
+      images: [
+        'https://storage.googleapis.com/mybid-e8958.appspot.com/1622353212304 - quick-response-code-indonesia-standard-qris-logo-F300D5EB32-seeklogo.com.png',
+      ],
+    },
+    {
+      id: 6,
+      name: 'Toyota Vios 2005 ',
+      base_price: 'Rp 50.000.000',
+      end_at: '7 Juni 2021',
+      lokasi: 'Bandung ',
+      images: [
+        'https://storage.googleapis.com/mybid-e8958.appspot.com/1622353212304 - quick-response-code-indonesia-standard-qris-logo-F300D5EB32-seeklogo.com.png',
+      ],
+    },
+    {
+      id: 7,
+      name: 'Toyota Vios 2012 ',
+      base_price: 'Rp 55.000.000',
+      end_at: '9 Juni 2021',
+      lokasi: 'Bandung ',
+      images: [
+        'https://storage.googleapis.com/mybid-e8958.appspot.com/1622353212304 - quick-response-code-indonesia-standard-qris-logo-F300D5EB32-seeklogo.com.png',
+      ],
+    },
+    {
+      id: 8,
+      name: 'Daihatsu Agya 2015 ',
+      base_price: 'Rp 58.000.000',
+      end_at: '9 Juni 2021',
+      lokasi: 'Surabaya ',
+      images: [
+        'https://storage.googleapis.com/mybid-e8958.appspot.com/1622353212304 - quick-response-code-indonesia-standard-qris-logo-F300D5EB32-seeklogo.com.png',
+      ],
+    },
+    {
+      id: 9,
+      name: 'Kawasaki Ninja 2015 ',
+      base_price: 'Rp 30.000.000',
+      end_at: '10 Juni 2021',
+      lokasi: 'jakarta ',
+      images: [
+        'https://storage.googleapis.com/mybid-e8958.appspot.com/1622353212304 - quick-response-code-indonesia-standard-qris-logo-F300D5EB32-seeklogo.com.png',
+      ],
+    },
+    {
+      id: 10,
+      name: 'Jeep 2015 ',
+      base_price: 'Rp 200.000.000',
+      end_at: '10 Juni 2021',
+      lokasi: 'jakarta',
+      images: [
+        'https://storage.googleapis.com/mybid-e8958.appspot.com/1622353212304 - quick-response-code-indonesia-standard-qris-logo-F300D5EB32-seeklogo.com.png',
+      ],
+    },
+  ];
+  
   useDocumentTitle('Home');
 
   return (
@@ -57,6 +160,9 @@ export default function Home() {
             Cari
           </button>
         </div>
+      </section>
+      <section className="produk-terlaris">
+        <Products title="Produk Terlaris" products={products} />
       </section>
       <MyBidProfile />
     </AppLayout>
