@@ -66,6 +66,8 @@ export default function products() {
     },
   ];
 
+  useDocumentTitle('Produk Lelang');
+
   return (
     <AppLayout>
       <header>
