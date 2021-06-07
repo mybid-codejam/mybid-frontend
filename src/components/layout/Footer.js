@@ -12,62 +12,64 @@ import emailImg from '../../images/email.svg';
 export default function Footer() {
   return (
     <footer>
-      <div className="footer-detail">
-        <div className="customer-service">
-          <h5 className="detail-title">Customer Service</h5>
-          <ul className="custom-service-list">
-            <li>
-              <img src={mapImg} alt="social-media-icon" />
-              <p>
-                Jalan Sriwijaya No 12, Padjajaran, <br /> Kota Bandung, Jawa
-                Barat Indonesia
-              </p>
-            </li>
-            <li>
-              <img src={phoneImg} alt="social-media-icon" />
-              <p>(021) 87624513</p>
-            </li>
-            <li>
-              <img src={clockImg} alt="social-media-icon" />
-              <p>Senin - Jumat 08.00 - 16.00</p>
-            </li>
-            <li>
-              <img src={emailImg} alt="social-media-icon" />
-              <p>cs@mybid.id</p>
-            </li>
-          </ul>
-        </div>
-        <div className="myBid-indonesia">
-          <h5 className="detail-title">Mybid Indonesia</h5>
-          <ul>
-            <li>Tentang Mybid</li>
-            <li>Info Mybid</li>
-            <li>Lokasi lelang</li>
-            <li>Jadwal lelang</li>
-            <li>Karir</li>
-            <li>Kontak</li>
-          </ul>
-        </div>
-        <div className="layanan">
-          <h5 className="detail-title">Layanan</h5>
-          <ul>
-            <li>Cari Objek Lelang</li>
-            <li>Jadwal Lelang</li>
-            <li>Terms & condition</li>
-            <li>Info penting</li>
-          </ul>
-        </div>
-        <div className="ikuti-kami">
-          <h5 className="detail-title">Ikuti kami</h5>
-          <div className="social-media-img">
-            <img src={facebookImg} alt="social media image" />
-            <img src={instaImg} alt="social media image" />
-            <img src={twitterImg} alt="social media image" />
+      <div className="footer-container">
+        <div className="footer-detail">
+          <div className="customer-service">
+            <h5 className="detail-title">Customer Service</h5>
+            <ul className="custom-service-list">
+              <li>
+                <img src={mapImg} alt="social-media-icon" />
+                <p>
+                  Jalan Sriwijaya No 12, Padjajaran, <br /> Kota Bandung, Jawa
+                  Barat Indonesia
+                </p>
+              </li>
+              <li>
+                <img src={phoneImg} alt="social-media-icon" />
+                <p>(021) 87624513</p>
+              </li>
+              <li>
+                <img src={clockImg} alt="social-media-icon" />
+                <p>Senin - Jumat 08.00 - 16.00</p>
+              </li>
+              <li>
+                <img src={emailImg} alt="social-media-icon" />
+                <p>cs@mybid.id</p>
+              </li>
+            </ul>
+          </div>
+          <div className="myBid-indonesia">
+            <h5 className="detail-title">Mybid Indonesia</h5>
+            <ul>
+              <li>Tentang Mybid</li>
+              <li>Info Mybid</li>
+              <li>Lokasi lelang</li>
+              <li>Jadwal lelang</li>
+              <li>Karir</li>
+              <li>Kontak</li>
+            </ul>
+          </div>
+          <div className="layanan">
+            <h5 className="detail-title">Layanan</h5>
+            <ul>
+              <li>Cari Objek Lelang</li>
+              <li>Jadwal Lelang</li>
+              <li>Terms & condition</li>
+              <li>Info penting</li>
+            </ul>
+          </div>
+          <div className="ikuti-kami">
+            <h5 className="detail-title">Ikuti kami</h5>
+            <div className="social-media-img">
+              <img src={facebookImg} alt="social media image" />
+              <img src={instaImg} alt="social media image" />
+              <img src={twitterImg} alt="social media image" />
+            </div>
           </div>
         </div>
       </div>
       <div className="footer-copyright">
-        &copy; 2021 Mybid Indonesia All rights reserved
+        &copy; 2021 Mybid Indonesia. All rights reserved
       </div>
     </footer>
   );
