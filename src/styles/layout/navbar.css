@@ -46,7 +46,7 @@ nav {
   transition: width 0.3s;
 }
 
-.provile-menu-mobile {
+.profile-menu-mobile {
   @apply pt-4 pb-3 border-t-2;
 }
 

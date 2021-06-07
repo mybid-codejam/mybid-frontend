@@ -9,6 +9,7 @@ import devicesImg from '../images/Devices.svg';
 import houseImg from '../images/House.svg';
 import carImg from '../images/Car.svg';
 import motorImg from '../images/Motor.svg';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 export default function Home() {
   const products = [
@@ -113,6 +114,8 @@ export default function Home() {
       ],
     },
   ];
+  
+  useDocumentTitle('Home');
 
   return (
     <AppLayout>

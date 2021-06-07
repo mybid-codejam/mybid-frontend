@@ -45,7 +45,7 @@ export default function MybidProfile() {
             src={icon3}
           />
           <div className="profile-detail">
-            <h5 className="detail-title">Transaksi Aman & Mudah</h5>
+            <h5 className="detail-title">Transaksi Aman &amp; Mudah</h5>
             <p>Transaksi di Mybid aman dan mudah dengan menggunakan bank</p>
           </div>
         </div>
