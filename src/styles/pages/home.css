@@ -87,7 +87,7 @@ h2:hover {
 }
 
 .filter-button {
-  @apply p-1 border rounded-xl border-secondary w-20 my-8 ml-auto;
+  @apply p-1 border rounded-xl border-secondary w-20 my-4 ml-auto;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
 }

@@ -1,13 +1,22 @@
+import React, { useState } from 'react';
+import DateRangePicker from '@wojtekmaj/react-daterange-picker';
+import { Disclosure } from '@headlessui/react';
+import ChevronUpIcon from '../images/ChevronUp.svg';
+import useInput from '../features/inputFilter';
 import AppLayout from '../components/layout/AppLayout';
-import Slider from '../features/slider';
-import Disclosure from '../features/discloruse';
+import FilterDropdown from '../features/filterDropdown';
 import useDocumentTitle from '../hooks/useDocumentTitle';
-import '../styles/pages/productLelang.css';
+import '@wojtekmaj/react-daterange-picker/dist/entry.nostyle';
+import 'react-calendar/dist/Calendar.css';
+import '../styles/features/react-calendar.css';
+import '../styles/pages/jadwalLelang.css';
 import product1Img from '../images/product-sample.png';
 import deadlineicon from '../images/deadline-icon.svg';
 import mapIcon from '../images/map.svg';
 
-export default function Products() {
+export default function JadwalLelang() {
+  useDocumentTitle('Jadwal Lelang');
+
   const products = [
     {
       img: product1Img,
@@ -67,19 +76,59 @@ export default function Products() {
     },
   ];
 
-  useDocumentTitle('Produk Lelang');
+  const [value, onChange] = useState([new Date(), new Date()]);
+  const [provinsi, resetProvinsi, bindProvinsi] = useInput('');
+  const [kota, resetKota, bindKota] = useInput('');
 
   return (
     <AppLayout>
-      <header>
-        <Slider />
-      </header>
-      <section className="products">
-        <aside className="dropdown-filter">
-          <h5 className="dropdown-title">Detail Produk</h5>
-          <Disclosure />
-        </aside>
-        <article className="products-list">
+      <section className="flex flex-col">
+        <article className="flex flex-col md:flex-row justify-between items-center gap-y-4 my-4 md:px-4">
+          <DateRangePicker
+            value={value}
+            onChange={onChange}
+            className="order-1"
+          />
+          <FilterDropdown />
+          <Disclosure as="div" className="w-48 order-2" defaultOpen={true}>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex flex-row justify-between w-full px-4 py-2 text-sm font-medium text-left text-black rounded-lg focus:outline-none border border-secondary">
+                  <span>Lokasi</span>
+                  <img
+                    src={ChevronUpIcon}
+                    className={`${
+                      open ? 'transform rotate-180' : ''
+                    } w-5 h-5 black`}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className="disclosure-panel-jadwal-lelang">
+                  <div className="disclosure-input-wrapper">
+                    <input
+                      type="text"
+                      className="input-lokasi"
+                      placeholder="Provinsi"
+                      {...bindProvinsi}
+                    />
+                    <input
+                      type="text"
+                      className="input-lokasi"
+                      placeholder="Kota"
+                      {...bindKota}
+                    />
+                  </div>
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+          <button className="button-submit-filter" type="button">
+            Cari
+          </button>
+        </article>
+        <h5 className="text-left text-2xl font-semibold px-4 mt-8">
+          Hasil Pencarian
+        </h5>
+        <article className="grid grid-cols-2 md:grid-cols-5 justify-items-center gap-12 my-4">
           {products &&
             products.map((product, index) => {
               return (
