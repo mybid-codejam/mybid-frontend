@@ -10,7 +10,7 @@ footer {
 }
 
 .footer-container {
-  @apply max-w-7xl mx-auto;
+  @apply max-w-full mx-auto;
 }
 
 .footer-detail {

@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@wojtekmaj/react-daterange-picker": "^3.2.0",
     "autoprefixer": "^9.8.6",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
