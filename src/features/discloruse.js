@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/solid';
 import useInput from './inputFilter';
@@ -26,10 +26,11 @@ export default function Example() {
     resetProvinsi();
     resetKota();
   };
+
   return (
     <div className="w-full md:w-48">
       <div className="w-full max-w-md mx-auto bg-white rounded-2xl flex flex-col justify-between">
-        <Disclosure as="div" className="mt-2">
+        <Disclosure as="div" className="mt-2" defaultOpen={true}>
           {({ open }) => (
             <>
               <Disclosure.Button className="disclosure-button">
@@ -61,7 +62,7 @@ export default function Example() {
             </>
           )}
         </Disclosure>
-        <Disclosure as="div" className="mt-2">
+        <Disclosure as="div" className="mt-2" defaultOpen={true}>
           {({ open }) => (
             <>
               <Disclosure.Button className="disclosure-button">
@@ -99,7 +100,7 @@ export default function Example() {
             </>
           )}
         </Disclosure>
-        <Disclosure as="div" className="mt-2">
+        <Disclosure as="div" className="mt-2" defaultOpen={true}>
           {({ open }) => (
             <>
               <Disclosure.Button className="disclosure-button">
@@ -110,8 +111,8 @@ export default function Example() {
                   } w-5 h-5 black`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="pt-4 pb-2 text-sm text-black">
-                <div className="flex flex-col flex-wrap items-stretch w-full mb-4 relative">
+              <Disclosure.Panel className="pt-4 text-sm text-black">
+                <div className="flex flex-col flex-wrap items-stretch w-full relative">
                   <input
                     type="text"
                     className="filter-lokasi"
