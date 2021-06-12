@@ -1,7 +1,7 @@
 import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/solid';
-import useInput from './inputFilter';
+import useInput from '../hooks/useInput';
 import '../styles/features/disclosure.css';
 import '../styles/features/inputFilter.css';
 

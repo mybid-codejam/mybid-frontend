@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.prosedur-text {
+  @apply flex flex-col md:flex-row justify-between;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.text-1-4,
+.text-5-8 {
+  @apply flex flex-col justify-between;
+  width: 40vw;
+  height: 80vh;
+}
+
+.text-per-number {
+  @apply grid;
+  grid-template-columns: 1fr 9fr;
+}
+
+.number-text {
+  @apply flex items-center justify-center w-12 h-12 border rounded-full mr-4 text-white text-lg;
+  background: #1f3a93;
+}
+
+.text-title {
+  @apply font-semibold mb-2;
+}

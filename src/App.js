@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './pages/home';
 import ObjekLelang from './pages/produkLelang';
 import JadwalLelang from './pages/JadwalLelang';
+import Prosedur from './pages/prosedur';
+import DetailProduct from './pages/detailProduct';
 
 export default function BasicExample() {
   return (
@@ -16,6 +18,12 @@ export default function BasicExample() {
         </Route>
         <Route path="/lelang/jadwal">
           <JadwalLelang />
+        </Route>
+        <Route path="/prosedur">
+          <Prosedur />
+        </Route>
+        <Route path="/asset/:id">
+          <DetailProduct />
         </Route>
       </Switch>
     </Router>

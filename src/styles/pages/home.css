@@ -5,69 +5,21 @@
   @apply flex flex-col md:flex-row justify-center md:justify-between;
 }
 
-.jadwal-lelang,
 .filter-items {
-  @apply flex flex-col border px-4 py-8 my-4 md:m-4 w-full h-96 md:h-72;
+  @apply flex flex-col border px-4 py-8 my-4 md:m-4 w-full md:h-72;
+  height: 26rem;
   background-color: #fcfcfc;
   border-radius: 0.25rem;
   box-shadow: 2px 2px 4px 2px #8e8f9340;
 }
 
-.jadwal-title,
 .filter-title {
   @apply text-black text-base font-semibold;
   font-family: 'Montserrat', sans-serif;
 }
 
-.jadwal-nav,
 .filter-icons {
   @apply flex flex-row;
-}
-
-.jadwal-nav {
-  @apply py-8;
-}
-
-.jadwal-nav > h2 {
-  @apply font-normal text-sm cursor-pointer;
-  margin-right: 2rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.jadwal-nav > h2::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background-color: #1f3a93;
-  transition: width 0.3s;
-}
-
-h2:hover {
-  @apply text-secondary;
-}
-
-.jadwal-nav > h2:hover::after {
-  width: 100%;
-}
-
-.jadwal-items {
-  @apply border rounded-md flex flex-row justify-between items-center py-4;
-  max-width: 11.5rem;
-  box-shadow: 2px 2px 4px 0px #d1d0d040;
-}
-
-.objek-lelang {
-  @apply flex flex-row justify-between items-center mx-5;
-}
-
-.detail-objek {
-  @apply flex flex-col text-xs;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.objek-lelang > .detail-objek > .lokasi-objek {
-  @apply font-semibold;
 }
 
 .filter-icons {
@@ -83,7 +35,11 @@ h2:hover {
 }
 
 .filter-harga {
-  @apply grid grid-cols-2 md:grid-cols-4 gap-4;
+  @apply grid grid-cols-2 gap-4;
+}
+
+.input-lokasi {
+  @apply leading-normal w-44 mb-4 border h-10 rounded-md px-3 relative border-secondary focus:outline-none focus:ring-2 focus:ring-offset-blue-500 focus:ring-opacity-50;
 }
 
 .filter-button {

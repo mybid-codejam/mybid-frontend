@@ -10,8 +10,16 @@
   width: 30vw;
 }
 
+.main-image,
+.image-1,
+.image-2,
+.image-3,
+.image-4 {
+  @apply rounded-2xl border;
+}
+
 .sub-images {
-  @apply grid grid-cols-4 gap-x-2;
+  @apply grid grid-cols-4 gap-x-2 mt-2;
 }
 
 .product-spesification {
@@ -40,7 +48,8 @@
 }
 
 .detail:hover,
-.dokumen:hover {
+.dokumen:hover,
+.active-text {
   @apply border-b border-secondary;
   color: #1f3a93;
 }

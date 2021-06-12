@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 import { Disclosure } from '@headlessui/react';
-import ChevronUpIcon from '../images/ChevronUp.svg';
-import useInput from '../features/inputFilter';
+import useInput from '../hooks/useInput';
 import AppLayout from '../components/layout/AppLayout';
 import FilterDropdown from '../features/filterDropdown';
 import useDocumentTitle from '../hooks/useDocumentTitle';
@@ -11,8 +10,9 @@ import 'react-calendar/dist/Calendar.css';
 import '../styles/features/react-calendar.css';
 import '../styles/pages/jadwalLelang.css';
 import product1Img from '../images/product-sample.png';
-import deadlineicon from '../images/deadline-icon.svg';
-import mapIcon from '../images/map.svg';
+import { LocationMarkerIcon } from '@heroicons/react/outline';
+import { ClipboardIcon } from '@heroicons/react/outline';
+import { ChevronUpIcon } from '@heroicons/react/outline';
 
 export default function JadwalLelang() {
   useDocumentTitle('Jadwal Lelang');
@@ -90,13 +90,12 @@ export default function JadwalLelang() {
             className="order-1"
           />
           <FilterDropdown />
-          <Disclosure as="div" className="w-48 order-2" defaultOpen={true}>
+          <Disclosure as="div" className="w-48 order-2">
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex flex-row justify-between w-full px-4 py-2 text-sm font-medium text-left text-black rounded-lg focus:outline-none border border-secondary">
                   <span>Lokasi</span>
-                  <img
-                    src={ChevronUpIcon}
+                  <ChevronUpIcon
                     className={`${
                       open ? 'transform rotate-180' : ''
                     } w-5 h-5 black`}
@@ -143,11 +142,11 @@ export default function JadwalLelang() {
                     <p className="product-price">{product.price}</p>
                     <ul className="product-deadline-location">
                       <li className="product-deadline">
-                        <img src={deadlineicon} alt="deadline-icon" />
+                        <ClipboardIcon className="h-5 w-5 text-secondary mr-2" />
                         <p>{product.deadline}</p>
                       </li>
                       <li className="product-location">
-                        <img src={mapIcon} alt="location-icon" />
+                        <LocationMarkerIcon className="h-5 w-5 text-secondary mr-2" />
                         <p>{product.location}</p>
                       </li>
                     </ul>

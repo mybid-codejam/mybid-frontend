@@ -5,6 +5,12 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.product-image {
+  border-radius: 0.5rem;
+  max-width: 180px;
+  height: 180px;
+}
+
 .product-harga {
   @apply font-semibold;
 }
@@ -12,7 +18,7 @@
 .product-merek,
 .product-deadline,
 .product-lokasi {
-  @apply text-sm;
+  @apply text-sm my-2;
 }
 
 .product-lokasi,
