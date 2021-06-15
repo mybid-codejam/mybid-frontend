@@ -3,7 +3,8 @@ import AppLayout from '../components/layout/AppLayout';
 import MyBidProfile from '../components/MybidProfile';
 import Slider from '../features/slider';
 import Products from '../components/Products';
-import FilterDropdown from '../features/filterDropdown';
+import useInput from '../hooks/useInput';
+import Spinner from '../features/spinner';
 import '../styles/pages/home.css';
 import BoxJadwalLelang from '../components/BoxJadwalLelang';
 import devicesImg from '../images/Devices.svg';
@@ -15,9 +16,19 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 export default function Home() {
   useDocumentTitle('Home');
   const { items, isLoading, isError } = getAllItems();
-  if (isLoading) return <div>Loading...</div>;
+  const [provinsi, resetProvinsi, bindProvinsi] = useInput();
+  const [kota, resetKota, bindKota] = useInput();
+  const [hargaMin, resetHargaMin, bindHargaMin] = useInput();
+  const [hargaMax, resetHargaMax, bindHargaMax] = useInput();
+  if (isLoading) return <Spinner />;
   if (isError) return console.log(isError);
-
+  const submitFilterHandler = (e) => {
+    e.preventDefault();
+    resetProvinsi();
+    resetKota();
+    resetHargaMin();
+    resetHargaMax();
+  };
   return (
     <AppLayout>
       <header>
@@ -38,20 +49,32 @@ export default function Home() {
               type="text"
               className="input-lokasi"
               placeholder="Provinsi"
+              {...bindProvinsi}
             />
-            <input type="text" className="input-lokasi" placeholder="Kota" />
+            <input
+              type="text"
+              className="input-lokasi"
+              placeholder="Kota"
+              {...bindKota}
+            />
             <input
               type="number"
               className="input-lokasi"
               placeholder="Harga Minimum"
+              {...bindHargaMin}
             />
             <input
               type="number"
               className="input-lokasi"
               placeholder="Harga Maksimum"
+              {...bindHargaMax}
             />
           </div>
-          <button className="filter-button" type="button">
+          <button
+            className="filter-button"
+            type="button"
+            onClick={submitFilterHandler}
+          >
             Cari
           </button>
         </div>

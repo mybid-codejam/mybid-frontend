@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getItemById } from '../app/swrReusable';
+import Spinner from '../features/spinner';
 import AppLayout from '../components/layout/AppLayout';
 import CardNomorPesertLelang from '../components/CardNomorPesertaLelang';
 import '../styles/pages/detailProduct.css';
@@ -14,10 +15,8 @@ export default function DetailProduct() {
   const [activeIndex, setActiveIndex] = useState('Detail');
   let { id } = useParams();
   const { item, isLoading, isError } = getItemById(id);
-  if (isLoading) return <div>loading</div>;
+  if (isLoading) return <Spinner />;
   if (isError) return console.log(isError);
-  console.log(item.data);
-  console.log(id);
 
   return (
     <AppLayout>
@@ -65,6 +64,8 @@ export default function DetailProduct() {
           <p className="text-sm">
             {activeIndex === 'Detail'
               ? item.data.description
+              : item.data.document === ' '
+              ? 'Tidak ada dokumen yang dilampirkan'
               : item.data.document}
           </p>
           <button className="button-keranjang" type="button">

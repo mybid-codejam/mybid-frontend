@@ -7,7 +7,19 @@
   --tw-ring-color: rgba(0, 0, 0, var(--tw-ring-opacity));
   z-index: 2;
   background-color: #fff;
-  box-shadow: 0px 0px 0px 0px #00000040;
+  box-shadow: 4px 4px 8px 2px #8e8f934d;
+}
+
+.disclosure-button {
+  @apply flex flex-row justify-between w-full px-4 py-2 text-sm font-medium text-left text-black rounded-lg focus:outline-none border border-secondary;
+}
+
+.disclosure-panel-categories {
+  @apply px-4 pt-4 pb-2 text-sm text-black flex flex-col absolute border w-48;
+  --tw-ring-color: rgba(0, 0, 0, var(--tw-ring-opacity));
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 4px 4px 8px 2px #8e8f934d;
 }
 
 .input-lokasi {

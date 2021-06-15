@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.products-list {
+  @apply grid place-content-center justify-items-center grid-cols-2 md:grid-cols-4 gap-8 my-8;
+}
+
+.product-item {
+  @apply border rounded-xl grid grid-cols-1 gap-0;
+  max-width: 15vw;
+  box-shadow: 4px 4px 8px 2px #8e8f934d;
+}
+
+.product-item-detail {
+  @apply p-4 rounded-xl;
+  background-color: #fcfcfc;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.product-item-name,
+.product-item-deadline-location {
+  @apply text-sm;
+}
+
+.product-item-price {
+  @apply font-semibold my-2;
+}
+
+.product-item-deadline-location > li {
+  @apply flex flex-row my-2;
+}
+
+.product-item-deadline-location > li > img {
+  @apply mr-4;
+}

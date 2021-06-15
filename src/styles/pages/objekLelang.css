@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.products {
+  @apply mt-8 flex flex-col md:flex-row justify-between;
+}
+
+.dropdown-title {
+  @apply font-semibold text-xl;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.filter-button {
+  @apply p-1 border rounded-xl border-secondary w-20 my-4 ml-auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.filter-button:hover {
+  background: #1f3a93;
+}
+
+.products-box {
+  min-width: 70vw;
+}

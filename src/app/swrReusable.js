@@ -1,4 +1,4 @@
-import useSWR from 'swr';
+import useSWR, { mutate } from 'swr';
 
 const token = 'f573fa598f25ab099b3cfa24b57102b5';
 
@@ -76,5 +76,18 @@ export let filterCategory = (id) => {
   return {
     categoryItem: data,
     filCatError: error,
+  };
+};
+
+export let filterAllParam = (id, location, province, max, min, endedAt) => {
+  const urlFilterAllParam = `https://mybid-backend.herokuapp.com/api/asset?category=${id}&location=${location}&province=${province}&max=${max}&min=${min}&end=${endedAt}`;
+
+  const { data, error } = useSWR([urlFilterAllParam, token], fetcherWithToken, {
+    refreshInterval: 0,
+  });
+
+  return {
+    filAllData: data,
+    filAllError: error,
   };
 };

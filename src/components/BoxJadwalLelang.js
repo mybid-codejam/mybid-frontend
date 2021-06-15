@@ -33,7 +33,6 @@ export default function BoxJadwalLelang() {
                 }
                 onClick={() => {
                   setActiveIndex(category.id);
-                  console.log(categoryItem);
                 }}
               >
                 {category.name}

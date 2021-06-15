@@ -3,6 +3,7 @@
 .product-detail-wrapper {
   @apply p-4;
   font-family: 'Montserrat', sans-serif;
+  box-shadow: 4px 4px 8px 2px #8e8f934d;
 }
 
 .product-image {

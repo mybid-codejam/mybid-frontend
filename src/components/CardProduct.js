@@ -6,7 +6,7 @@ import '../styles/components/productItem.css';
 
 export default function CardProduct({ product }) {
   return (
-    <NavLink to={`asset/${product.id}`}>
+    <NavLink to={`asset/${product.id}`} className="product-item-wrapper">
       <img
         src={product.thumb}
         alt={`${product.name} images`}
