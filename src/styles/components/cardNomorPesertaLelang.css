@@ -1,0 +1,28 @@
+.card-wrapper {
+  @apply border rounded-lg p-8;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px 2px #8e8f9333;
+}
+
+.card-title {
+  @apply font-semibold text-center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.inputNPL {
+  @apply border-b border-t-0 border-l-0 border-r-0 w-full my-3 focus:outline-none focus:ring-0 text-sm;
+}
+
+.warning-text {
+  @apply flex flex-row text-xs items-start;
+  color: #00ad1c;
+}
+
+.button-beliNPL {
+  @apply text-center text-white py-2 w-full rounded-2xl mt-8;
+  background-color: #1f3a93;
+}
+
+.button-beliNPL:hover {
+  background-color: #0b1538;
+}

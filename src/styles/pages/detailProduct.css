@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.detail-product {
+  @apply grid grid-cols-2 md:grid-cols-3 gap-8 my-4;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.image-gallery {
+  @apply flex flex-col gap-y-2;
+  width: 30vw;
+}
+
+.main-image,
+.image-1,
+.image-2,
+.image-3,
+.image-4 {
+  @apply rounded-2xl border;
+}
+
+.sub-images {
+  @apply grid grid-cols-4 gap-x-2 mt-2;
+}
+
+.product-spesification {
+  @apply flex flex-col gap-y-3 my-8;
+}
+
+.product-title {
+  @apply font-semibold text-lg;
+}
+
+.product-lokasi-deadline {
+  @apply flex flex-row gap-x-4;
+}
+
+.product-price {
+  @apply text-2xl font-semibold;
+}
+
+.detail-dokumen {
+  @apply border-t border-b flex flex-row gap-x-6 cursor-pointer;
+}
+
+.detail,
+.dokumen {
+  @apply py-3;
+}
+
+.detail:hover,
+.dokumen:hover,
+.active-text {
+  @apply border-b border-secondary;
+  color: #1f3a93;
+}
+
+.button-keranjang {
+  @apply border border-secondary p-2 rounded-2xl mt-8;
+}
+
+.button-keranjang:hover {
+  @apply transition-all duration-150 text-white;
+  background-color: #1f3a93;
+}

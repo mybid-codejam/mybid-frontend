@@ -5,7 +5,7 @@
   max-width: 350px;
 }
 
-.react-daterange-picker__wrapper {
+.react-date-picker__wrapper {
   @apply border border-secondary rounded-md p-2 relative;
 }
 
@@ -44,4 +44,12 @@
 .react-calendar__tile--now {
   background-color: #1f3a93;
   color: white;
+}
+
+.react-daterange-picker__inputGroup__input {
+  padding: 0 !important;
+}
+
+.react-date-picker__inputGroup__divider {
+  @apply px-1;
 }

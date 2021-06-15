@@ -39,8 +39,8 @@
     ]
   },
   "devDependencies": {
-    "@wojtekmaj/react-daterange-picker": "^3.2.0",
     "autoprefixer": "^9.8.6",
+    "dayjs": "^1.10.5",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.3",
@@ -55,6 +55,7 @@
     "material-design-icons": "^3.0.1",
     "postcss": "^7.0.35",
     "prettier": "^2.3.0",
+    "react-date-picker": "^8.2.0",
     "swiper": "^6.6.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
   },

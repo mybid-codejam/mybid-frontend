@@ -1,0 +1,76 @@
+.jadwal-lelang {
+  @apply flex flex-col border px-4 py-8 my-4 md:m-4 w-full md:h-72;
+  height: 26rem;
+  background-color: #fcfcfc;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 4px 2px #8e8f9340;
+}
+
+.jadwal-title {
+  @apply text-black text-base font-semibold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.jadwal-nav {
+  @apply flex flex-row py-8;
+}
+
+.navBox {
+  @apply font-normal text-sm cursor-pointer;
+  margin-right: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navBox::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #1f3a93;
+  transition: width 0.3s;
+}
+
+.navBox:hover {
+  @apply text-secondary;
+}
+
+.navBox:hover::after {
+  width: 100%;
+}
+
+.activeCat {
+  color: #1f3a93;
+}
+
+.activeCat::after {
+  content: '';
+  width: 100%;
+  display: block;
+  height: 2px;
+  background-color: #1f3a93;
+  transition: width 0.3s;
+}
+
+.filterItem-list {
+  @apply grid -mt-2;
+  max-width: 33rem;
+}
+
+.jadwal-items {
+  @apply border rounded-md flex flex-row justify-between items-center py-4;
+  max-width: 14rem;
+  box-shadow: 2px 2px 4px 0px #d1d0d040;
+}
+
+.objek-lelang {
+  @apply grid grid-cols-2 gap-x-4 mx-5 align-middle items-center;
+}
+
+.detail-objek {
+  @apply flex flex-col text-xs;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.objek-lelang > .detail-objek > .lokasi-objek {
+  @apply font-semibold my-2;
+}
